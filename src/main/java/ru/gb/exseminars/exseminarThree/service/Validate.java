@@ -2,6 +2,9 @@ package ru.gb.exseminars.exseminarThree.service;
 
 import ru.gb.exseminars.exseminarThree.exception.FailedValidation;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -49,11 +52,17 @@ public class Validate {
             throw new FailedValidation("Вы не корректно ввели номер телефона");
         }
         try {
+            LocalDate date = LocalDate.now();
             list.stream()
                     .filter(s -> s.matches("\\d{2}.\\d{2}.\\d{4}"))
+                    .filter(s -> LocalDate.parse(s.split("\\.")[2] + "-" +
+                            s.split("\\.")[1] + "-" +
+                            s.split("\\.")[0],
+                                    DateTimeFormatter.ISO_LOCAL_DATE)
+                            .isBefore(date))
                     .findFirst()
                     .orElseThrow();
-        } catch (NoSuchElementException e) {
+        } catch (NoSuchElementException | DateTimeParseException e) {
             throw new FailedValidation("Вы не корректно ввели дату рождения");
         }
         List<String> result = list.stream()
