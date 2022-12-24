@@ -5,24 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="632aaa59-5eb4-4fcd-a902-eb0f4f2bc5e7" name="Changes" comment="Validate data finished">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/gb/exseminars/exseminarThree/MyApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/gb/exseminars/exseminarThree/controller/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/gb/exseminars/exseminarThree/exception/FailedValidation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/gb/exseminars/exseminarThree/service/Validate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ru/gb/exseminars/exseminarThree/view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Petrov.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Petrova.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/gb/exseminars/exseminarThree/repository/SaveData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/gb/exseminars/exseminarThree/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/gb/exseminars/exseminarThree/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/gb/exseminars/exseminarThree/service/Validate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/gb/exseminars/exseminarThree/service/Validate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -50,17 +39,22 @@
     </option>
   </component>
   <component name="ProjectId" id="2JLjlbCAwZzGtgWXBqaFjn28jXQ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "last_opened_file_path": "/home/timofei/Homework/DailyPlanner",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -69,7 +63,15 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="ru.gb.exseminars.exseminarThree.repository" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.MyApplication">
     <configuration name="MyApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.gb.exseminars.exseminarThree.MyApplication" />
       <module name="exseminar3" />
@@ -83,9 +85,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SaveDataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="exseminar3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.gb.exseminars.exseminarThree.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.gb.exseminars.exseminarThree.repository" />
+      <option name="MAIN_CLASS_NAME" value="ru.gb.exseminars.exseminarThree.repository.SaveDataTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SaveDataTest.writeFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="exseminar3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.gb.exseminars.exseminarThree.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.gb.exseminars.exseminarThree.repository" />
+      <option name="MAIN_CLASS_NAME" value="ru.gb.exseminars.exseminarThree.repository.SaveDataTest" />
+      <option name="METHOD_NAME" value="writeFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.MyApplication" />
+        <item itemvalue="JUnit.SaveDataTest" />
+        <item itemvalue="JUnit.SaveDataTest.writeFile" />
       </list>
     </recent_temporary>
   </component>
@@ -97,14 +132,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1671864413363</updated>
-      <workItem from="1671864414711" duration="7819000" />
+      <workItem from="1671864414711" duration="12119000" />
     </task>
+    <task id="LOCAL-00001" summary="Validate data finished">
+      <created>1671872276016</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1671872276016</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Validate data finished" />
     <option name="LAST_COMMIT_MESSAGE" value="Validate data finished" />
   </component>

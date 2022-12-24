@@ -7,8 +7,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import ru.gb.exseminars.exseminarThree.exception.FailedValidation;
+import ru.gb.exseminars.exseminarThree.repository.SaveData;
 import ru.gb.exseminars.exseminarThree.service.Validate;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -34,10 +36,15 @@ public class MainController implements Initializable {
 
     public void saveClicked() {
         Validate validate = new Validate(answer.getText());
+        SaveData saveData;
         try {
             validate.start();
+            saveData = new SaveData(validate.getSurname(), answer.getText());
+            saveData.writeFile();
+            Alert alert = new Alert(Alert.AlertType.INFORMATION, "Данные сохранены успешно");
+            alert.showAndWait();
             answer.clear();
-        } catch (FailedValidation e) {
+        } catch (FailedValidation | IOException e) {
             Alert alert = new Alert(Alert.AlertType.ERROR, e.getLocalizedMessage());
             alert.showAndWait();
             answer.clear();

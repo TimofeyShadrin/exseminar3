@@ -5,13 +5,19 @@ import ru.gb.exseminars.exseminarThree.exception.FailedValidation;
 import java.util.Arrays;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.stream.Collectors;
 
 public class Validate {
 
     private final String incoming;
+    private String surname;
 
     public Validate(String incoming) {
         this.incoming = incoming;
+    }
+
+    public String getSurname() {
+        return surname;
     }
 
     public void start() throws FailedValidation {
@@ -50,12 +56,14 @@ public class Validate {
         } catch (NoSuchElementException e) {
             throw new FailedValidation("Вы не корректно ввели дату рождения");
         }
-        long count = list.stream()
+        List<String> result = list.stream()
                 .filter(s -> s.length() > 1)
                 .filter(s -> s.chars().allMatch(Character::isLetter))
-                .count();
+                .collect(Collectors.toList());
+        long count = result.size();
         if (count != 3) {
             throw new FailedValidation("Вы не корректно ввели Фамилию Имя Отчество");
         }
+        surname = result.get(0);
     }
 }
