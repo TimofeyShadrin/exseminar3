@@ -1,2 +1,1 @@
-m Petrov Ivan Ivanov 22.04.1991 89112356874
-m Petrov Pavel Victorovich 17.06.1993 89172356314
+<Petrov><Ivan><Nikolaevich><m><26.11.1991><89114256325>
